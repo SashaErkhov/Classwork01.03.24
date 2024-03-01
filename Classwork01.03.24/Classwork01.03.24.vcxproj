@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Classwork01.03.24.cpp" />
+    <ClCompile Include="stroka.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stroka.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
