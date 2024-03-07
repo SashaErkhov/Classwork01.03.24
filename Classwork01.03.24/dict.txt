@@ -1,0 +1,4 @@
+first	first word
+second	decond word
+auto	car
+bus	auto

@@ -1,5 +1,6 @@
 #pragma once
 #ifndef STROKA_OP_2023
+#define STROKA_OP_2023
 
 #include <string.h>
 #include <iostream>

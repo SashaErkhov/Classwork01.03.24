@@ -127,11 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="array.cpp" />
     <ClCompile Include="Classwork01.03.24.cpp" />
+    <ClCompile Include="dictpara.cpp" />
     <ClCompile Include="stroka.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="array.h" />
+    <ClInclude Include="dictpara.h" />
     <ClInclude Include="stroka.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dict.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
