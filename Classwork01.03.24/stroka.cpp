@@ -39,9 +39,13 @@ stroka& stroka::operator=(const stroka& other)
 	return *this;
 }
 
-char stroka::operator[](size_t index)const
+inline char stroka::operator[](size_t index)const
 {
-
+	if (index >= size_)
+	{
+		throw "Out of string limits";
+	}
+	return data_[index];
 }
 
 stroka& stroka::operator+=(const stroka& other)
@@ -60,10 +64,24 @@ stroka& stroka::operator+=(const stroka& other)
 	return *this;
 }
 
-bool operator==(const stroka& left, const stroka& right);
-bool operator!=(const stroka& left, const stroka& right);
-bool operator<(const stroka& left, const stroka& right);
-std::ostream& operator<<(std::ostream& out, const stroka& X);
+inline bool operator==(const stroka& left, const stroka& right)
+{
+	return strcmp(left.str(), right.str())==0;
+}
+inline bool operator!=(const stroka& left, const stroka& right)
+{
+	return !(left == right);
+	//return strcmp(left.str(), right.str()) != 0;
+}
+inline bool operator<(const stroka& left, const stroka& right)
+{
+	return strcmp(left.str(), right.str()) < 0;
+}
+std::ostream& operator<<(std::ostream& out, const stroka& X)
+{
+	out << X.str();
+	return out;
+}
 
 stroka operator+(const stroka& left, const stroka& right)
 {
