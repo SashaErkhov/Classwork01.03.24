@@ -12,9 +12,13 @@ class stroka{
 public:
 	stroka(const char * str="");
 	stroka(size_t N);
-	stroka(const stroka&);
+
+	//Правило пяти!!!!!!!!!!!!
+	stroka(const stroka&);//& - эльвелью
+	stroka(stroka&&);//&& - эрвелью
 	~stroka();
 	stroka& operator=(const stroka&);
+	stroka& operator=(stroka&&);
 
 	size_t length() const {return strlen(data_);}
 	size_t size() const {return size_;}
