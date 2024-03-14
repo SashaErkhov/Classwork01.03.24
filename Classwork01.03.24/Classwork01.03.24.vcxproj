@@ -127,9 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="array.cpp" />
-    <ClCompile Include="Classwork01.03.24.cpp" />
     <ClCompile Include="dictpara.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="stroka.cpp" />
   </ItemGroup>
   <ItemGroup>

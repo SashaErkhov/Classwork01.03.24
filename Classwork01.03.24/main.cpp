@@ -2,13 +2,14 @@
 #include <fstream>
 #include "dictpara.h"
 #include "array.h"
+#include <ctime>
 
 int main(){
 /*	stroka str("Hello");
 	stroka str2("world");
 	std::cout << str + " " + str2+ "!" <<std::endl;
 */
-	const char fname[] = "en_zh.txt";
+	const char fname[] = "en_ru.txt";
 
 	std::ifstream inFile(fname);
 	if(!inFile){
@@ -19,11 +20,14 @@ int main(){
 	Array<dictPara> Dictionary;
 	dictPara X;
 	int cnt=0;
-	while(inFile.peek()!=EOF && cnt<1000){
+	long tic = static_cast<long>(time(NULL));
+	while(inFile.peek()!=EOF){
 		inFile >> X;
 		Dictionary.push_back(X);
 		++cnt;
 	}
+	long toc = static_cast<long>(time(NULL));
+	std::cout << "Reading from file " << toc - tic << std::endl;
 	inFile.close();
 
 	std::cout<<"Total: "<< cnt << std::endl;
