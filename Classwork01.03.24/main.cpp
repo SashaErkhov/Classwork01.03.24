@@ -29,9 +29,14 @@ int main(){
 	long toc = static_cast<long>(time(NULL));
 	std::cout << "Reading from file " << toc - tic << std::endl;
 	inFile.close();
+	Dictionary.sort();
 
 	std::cout<<"Total: "<< cnt << std::endl;
 
+	for (auto pos = Dictionary.begin(); pos != Dictionary.end(); ++pos)
+	{
+		std::cout<<*pos;
+	}
 
 	char buf[128];
 	do {
@@ -39,11 +44,14 @@ int main(){
 		std::cin.getline(buf, 128);
 
 		dictPara what(buf, "");
-		for(size_t i=0; i<Dictionary.size(); ++i){
+		/*for(size_t i=0; i<Dictionary.size(); ++i){
 			if (Dictionary[i] == what){
 				std::cout << Dictionary[i];
 			}
-		}
+		}*/
+		auto pos=Dictionary.find(what);
+		if(pos!=Dictionary.end()) std::cout<<*pos;
+		else std::cout<<"Not find";
 	} while (strlen(buf) > 0);
 
 

@@ -33,14 +33,14 @@ public:
 		}
 		return *this;
 	}
-	dictPara& operator=(dictPara& other)
+	dictPara& operator=(const dictPara& other)
 	{
 		if (this != &other)
 		{
 			//эти две записи эквивалентны, но move удобнее
 			dictPara tmp(other);
-			std::swap(word_, other.word_);
-			std::swap(translate_, other.translate_);
+			std::swap(word_, tmp.word_);
+			std::swap(translate_, tmp.translate_);
 		}
 		return *this;
 	}
