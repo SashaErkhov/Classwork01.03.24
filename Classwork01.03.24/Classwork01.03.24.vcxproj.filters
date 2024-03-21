@@ -35,6 +35,9 @@
     <ClInclude Include="array.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="dict.txt">

@@ -13,9 +13,8 @@ public:
 	stroka(const char * str="");
 	stroka(size_t N);
 
-	//Правило пяти!!!!!!!!!!!!
-	stroka(const stroka&);//& - эльвелью
-	stroka(stroka&&);//&& - эрвелью
+	stroka(const stroka&);
+	stroka(stroka&&);
 	~stroka();
 	stroka& operator=(const stroka&);
 	stroka& operator=(stroka&&);

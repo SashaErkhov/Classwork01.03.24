@@ -18,8 +18,14 @@ stroka::stroka(const stroka& other){
 	memcpy(data_, other.data_, size_);
 }
 
+stroka::stroka(stroka&& other){
+	size_ = 0;
+	data_ = nullptr;
+	swap(other);
+}
+
 stroka::~stroka(){
-	if(data_) delete[] data_;
+	if (data_) delete[] data_;
 }
 
 stroka& stroka::operator=(const stroka& other){
@@ -36,20 +42,11 @@ stroka& stroka::operator=(const stroka& other){
 	return *this;
 }
 
-stroka& stroka::operator=(stroka&& other)
-{
-	if (this != &other)
-	{
+stroka& stroka::operator=(stroka&& other){
+	if (this != &other){
 		swap(other);
 	}
 	return *this;
-}
-
-stroka::stroka(stroka&& other)
-{
-	size_ = 0;
-	data_ = nullptr;
-	swap(other);
 }
 
 stroka& stroka::operator+=(const stroka& other){

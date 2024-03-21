@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="array.h" />
     <ClInclude Include="dictpara.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="stroka.h" />
   </ItemGroup>
   <ItemGroup>
