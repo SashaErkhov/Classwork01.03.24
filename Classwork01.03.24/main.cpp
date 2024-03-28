@@ -28,10 +28,17 @@ int main(){
 	std::cout<<"Total: "<< cnt << std::endl;
 	std::cout<<"Size: "<< Dictionary.size() << std::endl;
 	std::cout << "Height: " << Dictionary.height() << std::endl;
-	for (auto pos = Dictionary.begin(); pos != Dictionary.end(); ++pos)
+	/*cnt=0;
+	for (auto pos = Dictionary.begin(); pos != Dictionary.end() && cnt<20; ++pos,++cnt)
 	{
 		std::cout<<*pos;
 	}
+
+	cnt=0;
+	for (auto pos = Dictionary.rbegin(); pos != Dictionary.rend() && cnt < 20; ++pos, ++cnt)
+	{
+		std::cout << *pos;
+	}*/
 
 //
 //	//std::cout<<"Capacity: "<< Dictionary.capacity() << std::endl;
@@ -58,30 +65,30 @@ int main(){
 //	}
 //
 //
-//	char buf[128];
-//	do {
-//		std::cout << "> ";
-//		std::cin.getline(buf, 128);
-//
-//		dictPara what(buf, "");
-///*
-//	for(size_t i=0; i<Dictionary.size(); ++i){
-//			if (Dictionary[i] == what){
-//				std::cout << Dictionary[i];
-//			}
-//		}
-//*/
-//		int cnt=1000;
-//		auto pos = Dictionary.find(what);
-//		while (cnt > 0)
-//		{
-//			pos = Dictionary.find(what);
-//			--cnt;
-//		}
-//		if (pos!=Dictionary.end()){
-//			std::cout<< *pos;
-//			Dictionary.erase(pos);
-//		}
-//	} while (strlen(buf) > 0);
+	char buf[128];
+	do {
+		std::cout << "> ";
+		std::cin.getline(buf, 128);
+
+		dictPara what(buf, "");
+/*
+	for(size_t i=0; i<Dictionary.size(); ++i){
+			if (Dictionary[i] == what){
+				std::cout << Dictionary[i];
+			}
+		}
+*/
+		int cnt=1000;
+		auto pos = Dictionary.find(what);
+		while (cnt > 0)
+		{
+			pos = Dictionary.find(what);
+			--cnt;
+		}
+		if (pos!=Dictionary.end()){
+			std::cout<< *pos;
+			Dictionary.erase(pos);
+		}
+	} while (strlen(buf) > 0);
 	return 0;
 }
