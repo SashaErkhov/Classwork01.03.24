@@ -65,6 +65,10 @@ int main(){
 //	}
 //
 //
+
+	Dictionary.balance();
+	std::cout << "Height after balance: " << Dictionary.height() << std::endl;
+
 	char buf[128];
 	do {
 		std::cout << "> ";
