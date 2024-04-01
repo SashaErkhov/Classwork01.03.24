@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "dictpara.h"
-#include "bintree.h"
+#include "AVLtree.h"
 #include <ctime>
 
 int main(){
@@ -13,7 +13,7 @@ int main(){
 		return 1;
 	}
 	
-	BinTree<dictPara> Dictionary;
+	AVLTree<dictPara> Dictionary;
 	dictPara X;
 	int cnt=0;
 	long tic = static_cast<long>(time(NULL));
@@ -66,7 +66,7 @@ int main(){
 //
 //
 
-	Dictionary.balance();
+	//Dictionary.balance();
 	std::cout << "Height after balance: " << Dictionary.height() << std::endl;
 
 	char buf[128];
